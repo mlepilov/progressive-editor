@@ -1,0 +1,6 @@
+- Debug string functions when get to use them
+
+- If no listfile: add in WAV file name probing via enabled triggers, wav file extraction & write support
+- Add in SC detection/DD2 copying, TILE advanced detection
+- Finish up non-mpq restoration functions
+- Make the "Save Map..." and "Save Map As..." buttons grey out if a map has nothing done to it yet
