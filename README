@@ -1,0 +1,26 @@
+Progressive Editor
+----
+Progressive Editor is a rudimentary start to a StarCraft scenario ("map")
+editor, written in C++ using nothing but the Win32 API. So far, it supports
+reading and writing both raw .chk and compressed .scm/.scx scenarios, and it
+implements a map class featuring individual classes for every data chunk
+present in the scenario, ready to be used to edit the map. The editor was
+written with speed and support for reading corrupted maps; the beginnings of a
+"map repair" function can be seen.
+
+It currently uses a 3rd-party library to hook into Storm.dll (the library
+shipped with StarCraft and other Blizzard Entertainment games to unarchive
+their proprietary .mpq/.scm/.scx format); this provides the best way to read
+corrupted maps.
+
+This project was written long ago and subsequently abandoned by me, but others
+interested in making a map editor could easily use the parts on this repo to
+quickly start making either a map editor, or a map editing library. I last
+compiled/debugged it in 2007 using Visual Studio 6.0 (old school), and I last
+ran it on Windows XP. It might compile and run successfully on more current
+versions of Windows/Visual Studio, but the new memory protection features of
+Windows Vista/7 might make the 3rd-party Storm.dll-hooking library
+non-functional. In that case, there is another 3rd-party .mpq library on this
+repo, called lmpqapi, that is actually documented and allows .mpq/.scm/.scx
+unarchiving. I might also be using a few deprecated features of the Win32 API,
+but I don't think that's likely.
